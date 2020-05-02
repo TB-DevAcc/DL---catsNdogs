@@ -5,7 +5,7 @@
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 <img align="left" src="https://img.shields.io/github/last-commit/TB-DevAcc/DL-catsNdogs" alt="Last-commit Badge">
 
-## :sunrise_over_mountains: Basic Overview
+## Basic Overview
 
 The challenge was to create an image classifier for cats and dogs and to create a webapp to use it. 
 
@@ -31,7 +31,8 @@ To view the complete WebApp clone this project and run main.py. Here is a short 
 
 [CoderSchool](https://www.coderschool.vn/en/) for their help, support & mentorship <br>
 Titlephoto from [Snapwire](https://www.pexels.com/@snapwire) from Pexels <br>
-!Website Main Images from Pexels <br>
+Photo by [Dương Nhân](https://www.pexels.com/@d-ng-nhan-324384) from Pexels <br>
+Photo by [Torsten Dettlaff](https://www.pexels.com/@tdcat) from Pexels <br>
 Icons made by <a href="https://www.flaticon.com/authors/photo3idea-studio" title="photo3idea_studio">photo3idea_studio</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> <br>
 
 ## 📝 License
