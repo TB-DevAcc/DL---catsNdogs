@@ -1,22 +1,27 @@
 body { 
-    background: url(/static/images/bill-bg.jpg) no-repeat fixed; 
+    background: url(/static/images/cat_yawn.jpg) no-repeat fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    height: 100vh;
+}
+
+.mainview {
+    min-height: 95vh;
 }
 
 main .mainview .row{
-    min-height: 100%;
+    min-height: 95vh;
 }
 
 .footer-elements a {
     text-decoration: none;
-    color: white;
+    color: rgb(36, 32, 32);
     font-size: 0.6rem;
 }
 .footer-elements a:hover {
     text-decoration: none;
-    color: rgb(199, 199, 199);
+    color: rgb(124, 119, 119);
     font-size: 0.6rem;
 }
