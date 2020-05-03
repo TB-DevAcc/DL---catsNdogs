@@ -31,9 +31,11 @@ To view the complete WebApp clone this project and run main.py. Here is a short 
 
 [CoderSchool](https://www.coderschool.vn/en/) for their help, support & mentorship <br>
 Titlephoto from [Snapwire](https://www.pexels.com/@snapwire) from Pexels <br>
-Photo by [Dương Nhân](https://www.pexels.com/@d-ng-nhan-324384) from Pexels <br>
-Photo by [Torsten Dettlaff](https://www.pexels.com/@tdcat) from Pexels <br>
-Photo by [Cong H](https://www.pexels.com/@cong-h-613161) from Pexels <br>
+Website photos by:
+[Dương Nhân](https://www.pexels.com/@d-ng-nhan-324384) from Pexels <br>
+[Torsten Dettlaff](https://www.pexels.com/@tdcat) from Pexels <br>
+[Cong H](https://www.pexels.com/@cong-h-613161) from Pexels <br>
+[Adrianna Calvo](https://www.pexels.com/@adriannaca) from Pexels <br>
 Icons made by <a href="https://www.flaticon.com/authors/photo3idea-studio" title="photo3idea_studio">photo3idea_studio</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> <br>
 
 ## 📝 License

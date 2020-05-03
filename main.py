@@ -5,6 +5,9 @@ import model
 
 app = Flask(__name__, static_url_path='/static')
 
+classified_uploads = {}
+classified_uploads_meta = {'num_uploads':0, 'num_cats':0, 'num_dogs':0}
+
 @app.route('/')
 def index():
     return render_template('sign-up.html')
@@ -34,6 +37,17 @@ def demo():
             dog_cols = int(dog_prob*12)
             result = 'Dog'
 
+        classified_uploads[file.filename] = {
+            'cat_prob':round(cat_prob, 2), 
+            'dog_prob':round(dog_prob, 2),
+            'result':result
+            }
+        classified_uploads_meta['num_uploads'] += 1
+        if result == 'Cat':
+            classified_uploads_meta['num_cats'] += 1
+        else:
+            classified_uploads_meta['num_dogs'] += 1
+
     return render_template(
         'classify.html', 
         image_file_name=file.filename, 
@@ -47,6 +61,10 @@ def demo():
 @app.route('/classify/<filename>')
 def send_file(filename):
     return send_from_directory('uploads', filename)
+
+@app.route('/overview')
+def overview():
+    return render_template('overview.html', classified_uploads=classified_uploads, classified_uploads_meta=classified_uploads_meta)
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8000, debug=True)

@@ -1,0 +1,40 @@
+{% extends "template.html"%}
+
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/sign-up.css') }}">
+<link rel="stylesheet" href="{{ url_for('static',filename='styles/overview.css') }}">
+{% endblock %}
+
+
+{% block content %}
+<div class="container mainview">
+  <!-- Header -->
+  <div class="header position-absolute mx-3 my-3">
+    <a href="{{ url_for('index') }}" class="px-2"><button type="button" class="btn btn-outline-secondary">Home</button></a>
+    <a href="{{ url_for('overview') }}" class="px-2"><button type="button" class="btn btn-outline-secondary">Overview</button></a>
+    <a href="{{ url_for('demo') }}" class="px-2"><button type="button" class="btn btn-outline-secondary">Classify</button></a>
+  </div>
+
+  <!-- Content -->
+  <div class="classified">
+    <div class="card-columns">
+      {% for file in classified_uploads.keys() %}
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" id="card-image" src="static/uploads/{{file}}" alt="{{file}}">
+        <div class="card-body">
+          <h5 class="card-title">It's a {{ classified_uploads[file]['result'] }}</h5>
+          <p class="card-text">We have determined that your uploaded image contains </p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">a Dog with {{classified_uploads[file]['dog_prob']}}% certainty</li>
+          <li class="list-group-item">a Cat with {{classified_uploads[file]['cat_prob']}}% certainty.</li>
+        </ul>
+      </div>
+      {% endfor%}
+    </div>
+  </div>
+
+
+</div>
+
+{% endblock %}
