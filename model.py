@@ -22,7 +22,7 @@ def format_img(image_path):
 
 def predict(image):
 
-    model = tf.keras.models.load_model('saved_model/catsNdogs')
+    model = tf.keras.models.load_model('saved_model/catsNdogs_MN')
 
     # Check its architecture
     # model.summary()
