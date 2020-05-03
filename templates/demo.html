@@ -1,0 +1,50 @@
+{% extends "template.html"%}
+
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/sign-up.css') }}">
+<link rel="stylesheet" href="{{ url_for('static',filename='styles/demo.css') }}">
+{% endblock %}
+
+
+{% block content %}
+<div class="container mainview mx-0">
+  <!-- Header -->
+  <div class="header position-absolute mx-3 my-3"><a href="{{ url_for('index') }}"><button type="button" class="btn btn-outline-secondary">Home</button></a></div>
+
+  <!-- Content -->
+  <div class="row catNdog">
+    <div class="cat col-6">
+      
+    </div>
+    <div class="dog col-6">
+      
+    </div>
+  </div>
+
+  <div class="classify">
+    <div class="form-upload p-5">
+      
+      <!-- File Upload -->
+      <form action="/demo" method="post" enctype="multipart/form-data">
+        <div class="file has-name is-centered">   
+          
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" name= "image" id="image">
+            <label class="custom-file-label mx-auto" for="image" id="image-label"></label>
+          </div>
+        
+        </div>
+        <br>
+        <input type="submit" value="Classify" class="btn btn-danger" name="image" id="classify_button">
+      </form>
+
+    </div>
+  </div>
+
+
+
+
+
+</div>
+
+{% endblock %}

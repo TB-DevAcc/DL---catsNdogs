@@ -44,3 +44,5 @@ __pycache__
 # test files #
 ######################
 saved_model/test1
+static/uploads
+

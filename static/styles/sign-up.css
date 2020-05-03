@@ -11,8 +11,14 @@ body {
     min-height: 95vh;
 }
 
-main .mainview .row{
+.mainview .row{
     min-height: 95vh;
+}
+
+.form-signup{
+    background-color: rgba(248, 249, 250, 0.89);
+    max-height: 95vh;
+    overflow: auto;
 }
 
 .footer-elements a {

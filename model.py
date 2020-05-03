@@ -33,5 +33,5 @@ def predict(image):
 
     # print(new_model.predict(test_images).shape)
 
-    # Returns list with probability Cat & Dog [0, 1]
+    # Returns list with probability Dog & Cat [0, 1]
     return model.predict(format_img(image))[0]
