@@ -32,6 +32,7 @@ def demo():
         print('cat_prob', cat_prob)
         print('dog_prob', dog_prob)
 
+        # Set Bootstrap Column width
         if cat_prob > dog_prob:
             cat_cols = math.floor(cat_prob*12)
             dog_cols = math.ceil(dog_prob*12)
