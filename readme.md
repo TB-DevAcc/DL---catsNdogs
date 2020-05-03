@@ -17,7 +17,11 @@ Completion of the webapp and model was meant to be achieved within 1 week. (20.0
 To view the complete WebApp clone this project and run main.py. Here is a short preview of the site:
 
 <p align="center">
-    <img src="media/main_singalong.png" witdh="70%">
+    <img src="static/images/preview.jpg" witdh="70%">
+<p>
+<br><br>
+<p align="center">
+    <img src="static/images/preview2.jpg" witdh="70%">
 <p>
 
 ## :boy: Author
