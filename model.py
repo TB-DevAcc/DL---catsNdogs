@@ -7,10 +7,9 @@ from keras.preprocessing.image import img_to_array
 
 def format_img(image_path):    
     test_datagen = ImageDataGenerator(    
-        samplewise_center=True,           # Center to around 0
-        samplewise_std_normalization=True # Std to [0,1]
+        rescale=1./255
         )
-
+        
     # load the image
     image = load_img(image_path)
     # convert to numpy array
@@ -22,7 +21,7 @@ def format_img(image_path):
 
 def predict(image):
 
-    model = tf.keras.models.load_model('saved_model/catsNdogs_MN')
+    model = tf.keras.models.load_model('saved_model/catsNdogs_combined')
 
     # Check its architecture
     # model.summary()
