@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="static/images/readme_banner.jpg" witdh="100%">
+    <img src="static/images/cNd_banner.png" witdh="100%">
 <p>
 
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
