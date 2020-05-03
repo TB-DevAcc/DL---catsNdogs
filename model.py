@@ -1,8 +1,8 @@
 import numpy as np
 import tensorflow as tf
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from tensorflow.keras.preprocessing.image import load_img
-from tensorflow.keras.preprocessing.image import img_to_array
+from keras.preprocessing.image import ImageDataGenerator
+from keras.preprocessing.image import load_img
+from keras.preprocessing.image import img_to_array
 
 
 def format_img(image_path):    
