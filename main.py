@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, send_from_directory
+import math
 
 import model
 
@@ -26,20 +27,23 @@ def demo():
         print('Predicting on image at', upload_image_path)
         file.save(upload_image_path)
 
-        dog_prob, cat_prob = model.predict(upload_image_path)
+        cat_prob, dog_prob = model.predict(upload_image_path)
+
+        print('cat_prob', cat_prob)
+        print('dog_prob', dog_prob)
 
         if cat_prob > dog_prob:
-            cat_cols = int(cat_prob*12)
-            dog_cols = int(dog_prob*12)+1
+            cat_cols = math.floor(cat_prob*12)
+            dog_cols = math.ceil(dog_prob*12)
             result = 'Cat'
         else:
-            cat_cols = int(cat_prob*12)+1
-            dog_cols = int(dog_prob*12)
+            cat_cols = math.ceil(cat_prob*12)
+            dog_cols = math.floor(dog_prob*12)
             result = 'Dog'
 
         classified_uploads[file.filename] = {
-            'cat_prob':round(cat_prob, 2), 
-            'dog_prob':round(dog_prob, 2),
+            'cat_prob':round(cat_prob*100, 2), 
+            'dog_prob':round(dog_prob*100, 2),
             'result':result
             }
         classified_uploads_meta['num_uploads'] += 1
@@ -51,8 +55,8 @@ def demo():
     return render_template(
         'classify.html', 
         image_file_name=file.filename, 
-        cat_prob=round(cat_prob, 2), 
-        dog_prob=round(dog_prob, 2),
+        cat_prob=round(cat_prob*100, 2), 
+        dog_prob=round(dog_prob*100, 2),
         cat_cols=cat_cols,
         dog_cols=dog_cols,
         result=result

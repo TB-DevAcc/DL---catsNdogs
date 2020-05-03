@@ -39,7 +39,7 @@ Thumbs.db
 # VScode generated files #
 ######################
 .vscode/*
-__pycache__
+__pycache__/*
 
 # test files #
 ######################
