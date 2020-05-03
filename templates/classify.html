@@ -10,7 +10,11 @@
 {% block content %}
 <div class="container mainview mx-0">
   <!-- Header -->
-  <div class="header position-absolute mx-3 my-3"><a href="{{ url_for('index') }}"><button type="button" class="btn btn-outline-secondary">Home</button></a></div>
+  <div class="header position-absolute mx-3 my-3">
+    <a href="{{ url_for('index') }}" class="px-2"><button type="button" class="btn btn-outline-secondary">Home</button></a>
+    <a href="{{ url_for('overview') }}" class="px-2"><button type="button" class="btn btn-outline-secondary">Overview</button></a>
+    <a href="{{ url_for('demo') }}" class="px-2"><button type="button" class="btn btn-outline-secondary">Classify</button></a>
+  </div>
 
   <!-- Content -->
   <div class="row catNdog">
@@ -24,7 +28,7 @@
 
   <div class="classified my-2">
     <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="static/uploads/{{image_file_name}}" alt="{{image_file_name}}">
+      <img class="card-img-top" id="card-image" src="static/uploads/{{image_file_name}}" alt="{{image_file_name}}">
       <div class="card-body">
         <h5 class="card-title">It's a {{result}}</h5>
         <p class="card-text">We have determined that your uploaded image contains </p>

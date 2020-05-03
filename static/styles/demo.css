@@ -40,13 +40,16 @@ body {
   transform: translate(-50%, -75%);
   
   /* background-color: rgb(196, 146, 58); */
-  background: rgb(200,152,48);
-  background: radial-gradient(circle, rgba(200,152,48,1) 0%, rgba(176,130,26,1) 90%);
+  background: rgba(200, 152, 48, 0.89);
+  background: radial-gradient(circle, rgba(200, 152, 48, 0.719) 0%, rgba(176, 131, 26, 0.849) 90%);
 
   border-radius: 50%;
-  -moz-box-shadow:    0 0 10px #000000;
-  -webkit-box-shadow: 0 0 10px #000000;
-  box-shadow:         0 0 10px #000000;
+  -moz-box-shadow:    0 0 10px #141414;
+  -webkit-box-shadow: 0 0 10px #141414;
+  box-shadow:         0 0 10px #141414;
+
+  backdrop-filter: blur(5px);
+
 }
 
 .mainview .classify .form-upload{
